@@ -1,4 +1,5 @@
 import React from "react";
+import { v4 as uuidv4 } from 'uuid';
 import { useState } from "react";
 const  Content = () =>{
 
@@ -6,7 +7,7 @@ const  Content = () =>{
     const [lists, setLists] = useState([])
 
     const handleAdd = () =>{
-    setLists([...lists, {list, isCompleted:false}])
+    setLists([...lists, {id:uuidv4() ,list, isCompleted:false}])
     setList(" ")
     }
 
